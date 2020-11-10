@@ -1,5 +1,5 @@
 {
-  "name": "Node.js Sample",
+  "name": "Socket.io Synced Counter",
   "description": "A simple counter made with socket.io that can be controlled by anyone and is synced worldwide",
   "repository": "https://github.com/aapatre/Socket.io-Controllable-and-Synced-Counter/",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg",
