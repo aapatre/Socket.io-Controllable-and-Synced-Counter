@@ -1,0 +1,27 @@
+{
+    "name": "socket-synced-counter",
+    "version": "0.0.1",
+    "description": "The counter can be controlled and synced worldwide",
+    "dependencies": {
+        "express": "^4.17.1",
+        "socket.io": "^3.0.1"
+    },
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "keywords": [
+        "synced",
+        "counter",
+        "socket.io",
+        "socket",
+        "socketio",
+        "websockets",
+        "websocket"
+    ],
+    "author": "antariksh-patre",
+    "license": "MIT",
+    "engines": {
+        "node": "12.x"
+    }
+}
