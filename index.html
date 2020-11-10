@@ -17,11 +17,16 @@
         min-height: 30vh;
         font-size: 5em;
       }
+
+      .jumbotron{
+        background-color: aliceblue;
+      }
     </style>
   </head>
   <body>
     <div class="jumbotron vertical-center">
       <div class="container">
+        <p class="text-center" style="font-size: 1em;">Made by <span style="background-color: #ECF0F1;">Antariksh</span><a href="https://github.com/aapatre/Socket.io-Controllable-and-Synced-Counter">(GitHub)</a></p>
         <button onclick="incNum()" class="btn btn-success btn-lg btn-block">☝️</button>
         <p id='syncnum' class="text-center" style="font-size: 5em;">0</p>
         <button onclick="decNum()" class="btn btn-danger btn-lg btn-block">👇</button>
@@ -33,7 +38,7 @@
 
       var socket = io();
 
-      setInterval(getSyncNum, 10);
+      setInterval(getSyncNum, 1);
 
       function getSyncNum(){
         socket.emit('what num');
