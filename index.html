@@ -24,7 +24,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="askNumOnLoad()">
     <div class="jumbotron vertical-center">
       <div class="container">
         <p class="text-center" style="font-size: 1em;">Made by <span style="background-color: #ECF0F1;">Antariksh</span><a href="https://github.com/aapatre/Socket.io-Controllable-and-Synced-Counter">(GitHub)</a></p>
@@ -39,7 +39,7 @@
 
       var socket = io();
       
-      $(function () {
+      document.addEventListener("DOMContentLoaded", function(event) {
         socket.on('what num', function (syncnum){
           document.getElementById('syncnum').innerHTML = syncnum;
           console.log("I've received the number!");
