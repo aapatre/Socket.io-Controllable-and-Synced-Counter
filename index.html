@@ -38,15 +38,12 @@
     <script>
 
       var socket = io();
-
-      setInterval(getSyncNum, 1);
-
-      function getSyncNum(){
-        socket.emit('what num');
+      
+      $(function () {
         socket.on('what num', function (syncnum){
           document.getElementById('syncnum').innerHTML = syncnum;
         });
-      }
+      });
 
       function incNum(){
         socket.emit('inc num');
