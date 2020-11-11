@@ -34,29 +34,18 @@
       </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
 
       var socket = io();
       
-      socket.on('what num', function (syncnum){
-        document.getElementById('syncnum').innerHTML = syncnum;
-        console.log("askNumOnLoadExecuted!");
-      });
-      
-      document.addEventListener("DOMContentLoaded", function(event) {
+      $(function(){
         socket.on('what num', function (syncnum){
           document.getElementById('syncnum').innerHTML = syncnum;
           console.log("I've received the number!");
         });
       });
       
-      function askNumOnLoad(){
-        socket.on('what num', function (syncnum){
-          document.getElementById('syncnum').innerHTML = syncnum;
-          console.log("askNumOnLoadExecuted!");
-        });
-      }
-
       function incNum(){
         socket.emit('inc num');
       }
@@ -64,10 +53,7 @@
       function decNum(){
         socket.emit('dec num');
       }
-      
-      window.onload = function(){
-        askNumOnLoad();
-      }
+
     </script>
   </body>
 </html>
