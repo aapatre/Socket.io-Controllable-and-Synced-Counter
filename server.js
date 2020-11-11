@@ -15,10 +15,6 @@ io.on('connection', (socket) => {
         console.log('user disconnected');
     });
 
-    socket.on('what num', () => {
-        io.emit('what num', syncnum);
-    });
-
     socket.on('inc num', () => {
         ++syncnum;
         io.emit('what num', syncnum);
