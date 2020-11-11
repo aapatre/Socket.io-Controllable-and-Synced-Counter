@@ -34,12 +34,11 @@
       </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
 
       var socket = io();
       
-      $(function(){
+      document.addEventListener("DOMContentLoaded", function(event) {
         socket.on('what num', function (syncnum){
           document.getElementById('syncnum').innerHTML = syncnum;
           console.log("I've received the number!");
