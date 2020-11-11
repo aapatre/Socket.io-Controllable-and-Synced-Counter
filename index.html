@@ -24,7 +24,7 @@
       }
     </style>
   </head>
-  <body onload="askNumOnLoad()">
+  <body>
     <div class="jumbotron vertical-center">
       <div class="container">
         <p class="text-center" style="font-size: 1em;">Made by <span style="background-color: #ECF0F1;">Antariksh</span><a href="https://github.com/aapatre/Socket.io-Controllable-and-Synced-Counter">(GitHub)</a></p>
@@ -58,6 +58,10 @@
 
       function decNum(){
         socket.emit('dec num');
+      }
+      
+      window.onload = function(){
+        askNumOnLoad();
       }
     </script>
   </body>
