@@ -15,17 +15,19 @@ io.on('connection', (socket) => {
         console.log('user disconnected');
     });
 
-    socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
-    });
-
     socket.on('what num', () => {
         io.emit('what num', syncnum);
     });
 
-    socket.on('inc num', () => ++syncnum);
+    socket.on('inc num', () => {
+        ++syncnum;
+        io.emit('what num', syncnum);
+    });
 
-    socket.on('dec num', () => --syncnum);
+    socket.on('dec num', () => {
+        --syncnum;
+        io.emit('what num', syncnum);
+    });
 });
 
 http.listen(port, () => {
