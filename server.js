@@ -11,6 +11,9 @@ app.get('/', (req,res) => {
 
 io.on('connection', (socket) => {
     console.log('a user connected');
+    
+    io.emit('what num', syncnum);
+    
     socket.on('disconnect', () => {
         console.log('user disconnected');
     });
