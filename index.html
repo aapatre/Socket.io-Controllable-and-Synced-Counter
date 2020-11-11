@@ -38,6 +38,11 @@
 
       var socket = io();
       
+      socket.on('what num', function (syncnum){
+        document.getElementById('syncnum').innerHTML = syncnum;
+        console.log("askNumOnLoadExecuted!");
+      });
+      
       document.addEventListener("DOMContentLoaded", function(event) {
         socket.on('what num', function (syncnum){
           document.getElementById('syncnum').innerHTML = syncnum;
