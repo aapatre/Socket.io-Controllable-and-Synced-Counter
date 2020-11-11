@@ -48,7 +48,7 @@
       function askNumOnLoad(){
         socket.on('what num', function (syncnum){
           document.getElementById('syncnum').innerHTML = syncnum;
-          console.log("I've received the number!");
+          console.log("askNumOnLoadExecuted!");
         });
       }
 
